@@ -9,11 +9,16 @@ jobs:
     runs-on: [ubuntu-22.04]
     
     steps:
-    - uses: actions/checkout@v2
     - name: install dependencies
       run: |
         sudo apt-get update -qq
         sudo apt-get install -y libboost-system-dev libboost-thread-dev libboost-log-dev googletest asciidoc source-highlight doxygen graphviz
+    
+    - name: checkout vsomeip
+      uses: actions/checkout@master
+      with:
+        repository: COVESA/vsomeip
+    
     - name: Run CMake+Ninja without triplet
       uses: lukka/run-cmake@v2
       with:
