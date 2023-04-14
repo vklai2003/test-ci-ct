@@ -1,7 +1,9 @@
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-  std::cout << "CI/CT test application " << std::endl;
+  cout << "CI/CT test application " << endl;
   return 0;
 }
