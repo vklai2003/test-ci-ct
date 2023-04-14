@@ -2,6 +2,6 @@
 
 int main()
 {
-  std::cout << "CI/CT test applications " << std::endl;
+  std::cout << "CI/CT test application " << std::endl;
   return 0;
 }
