@@ -1,2 +1,2 @@
 # test-ci-ct
-[View Line 10](test.cpp#L9)
+[View main function](test.cpp#L5-L10)
