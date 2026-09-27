@@ -12,6 +12,7 @@ jobs:
       image: ubuntu:18.04
       volumes:
         - .:/workspace
+      options: --workdir=/workspace
       env:
         UID: 1000
         GID: 1000    
