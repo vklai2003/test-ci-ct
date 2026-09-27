@@ -15,4 +15,4 @@ jobs:
       - name: install dependencies
         run: |
           uname -a
-          lsb_release -a
+          cat /etc/os-release
