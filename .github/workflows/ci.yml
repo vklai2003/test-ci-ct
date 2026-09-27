@@ -12,8 +12,9 @@ jobs:
       image: ubuntu:18.04
       volumes:
         - .:/workspace
-
-    
+      env:
+        UID: 1000
+        GID: 1000    
     steps:
       - name: Sanity check
         run: |
@@ -23,3 +24,5 @@ jobs:
           pwd
           df -h
           mount
+          echo "UID: $UID"
+          echo "GID: $GID"
