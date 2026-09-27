@@ -12,7 +12,9 @@ jobs:
       image: ubuntu:18.04
       volumes:
         - .:/workspace
-      options: --workdir=/workspace
+      options: >-
+        --workdir=/workspace
+        --user=1001:1001
       env:
         UID: 1000
         GID: 1000    
@@ -22,8 +24,12 @@ jobs:
           uname -a
           cat /etc/os-release
           whoami
+          echo "id -u: $(id -u)"
+          echo "id -g: $(id -g)"
           pwd
           df -h
           mount
           echo "UID: $UID"
           echo "GID: $GID"
+          echo "Current working directory: $(pwd)"
+          ls -l /workspace
