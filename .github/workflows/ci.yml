@@ -6,16 +6,13 @@ on:
   
 jobs:
   build:
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
+    
+    container:
+      image: ubuntu:18.04
     
     steps:
-    - name: install dependencies
-      run: |
-        sudo apt-get update -qq
-        sudo apt-get install -y libboost-system-dev libboost-thread-dev libboost-log-dev googletest asciidoc source-highlight doxygen graphviz
-    
-    - name: checkout vsomeip
-      uses: actions/checkout@master
-      with:
-        repository: COVESA/vsomeip
-    
+      - name: install dependencies
+        run: |
+          uname -a
+          lsb_release -a
